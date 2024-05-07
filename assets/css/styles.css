@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Orden de grid */
+
+#root {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'header'
+        'filtro'
+        'main'
+        'footer'
+    ;
+}
+
+
+/* cabecera */
+
+header {
+    color: white;
+    display: flex;
+    background-color: rgb(40, 40, 143);
+    align-items: center;
+    padding: 1rem;
+    grid-area: header;
+}
+
+header i {
+    font-size: x-large;
+    margin: 0 1rem;
+}
+
+.fa-bars{
+    margin-left: auto;
+}
+
+
+/* Filtro */
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    align-items: center;
+    padding: 1rem;
+}
+
+.precio {
+    border-radius: 10px;
+    display: flex;
+    background-color: aliceblue;
+    margin: 1rem;
+    padding: 1rem;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.precio p {
+    font-size: larger;
+}
+
+.precio i {
+    color: rgb(140, 17, 151);
+}
+
+
+/* Grilla de juegos */
+
+.productos {
+    display: grid;
+    grid-area: main;
+    margin: 1rem 3rem;
+}
+
+.productos .juego {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+.productos .juego h3{
+    margin-bottom: 0.5rem;
+}
+
+.productos .juego p { 
+    border-radius: 10px;
+    background-color: #0e2a5f;
+    color: #fff;
+    padding: 1rem;
+}
+
+.productos .juego img {
+    width: auto;
+    margin: 1rem;
+    object-fit: contain;
+}
+
+.productos .juego .detalle {
+    width: 20%;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/* Selector de pagina */
+
+.selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector i {
+    color: #0e2a5f;
+    font-size: xx-large;
+    margin: 1rem;
+}
+
+.selector p {
+    height: 2rem;
+    width: 2rem;
+    font-size: x-large;
+    border: #0e2a5f52 solid 1px;
+    padding: 1rem;
+    text-align: center;
+}
