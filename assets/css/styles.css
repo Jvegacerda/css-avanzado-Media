@@ -47,6 +47,7 @@ header i {
     background-color: cornflowerblue;
     align-items: center;
     padding: 1rem;
+    grid-area: filtro;
 }
 
 .precio {
@@ -70,9 +71,13 @@ header i {
 
 /* Grilla de juegos */
 
+main {
+    height: calc(100vh - 19rem);
+    grid-area: main;
+}
+
 .productos {
     display: grid;
-    grid-area: main;
     margin: 1rem 3rem;
 }
 
@@ -88,6 +93,7 @@ header i {
 }
 
 .productos .juego h3{
+    
     margin-bottom: 0.5rem;
 }
 
@@ -96,16 +102,17 @@ header i {
     background-color: #0e2a5f;
     color: #fff;
     padding: 1rem;
+    
 }
 
 .productos .juego img {
-    width: auto;
+    width: 300px;
     margin: 1rem;
     object-fit: contain;
 }
 
 .productos .juego .detalle {
-    width: 20%;
+    width: 30%;
     text-align: center;
     margin: 1rem;
 }
@@ -133,3 +140,60 @@ header i {
     padding: 1rem;
     text-align: center;
 }
+
+/* pie de pagina */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0e2a5f;
+    padding: 1rem;
+    align-items: center;
+    grid-area: footer;
+}
+
+footer i {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    color: #fff;
+}
+
+
+@media (min-width: 576px) {
+
+#root {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-areas: 
+        'header filtro'
+        'header main'
+        'footer main'
+    ;
+    }
+
+    header {
+        color: white;
+        display: flex;
+        background-color: rgb(40, 40, 143);
+        align-items: start;
+        padding: 1rem;
+        grid-area: header;
+        height: calc(100vh - 8rem);
+    }
+    
+    header i {
+        font-size: x-large;
+        margin: 0 1rem;
+    }
+    
+    .fa-bars{
+        display: none;
+    }
+
+
+    
+}
+
