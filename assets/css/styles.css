@@ -193,7 +193,7 @@ footer p {
         text-align: center;
         padding: 1rem;
         grid-area: header;
-        height: calc(100vh - 8rem);
+        height: calc(100vh - 7rem);
         width: 199px;
         font-size: small;
     }
@@ -213,6 +213,11 @@ footer p {
         margin: 1rem;
     }
 
+
+    .precio {
+    min-width: 20%;
+    }
+
 /* grilla juegos */
 
     .productos .juego {
@@ -220,7 +225,6 @@ footer p {
     }
 
     .productos {
-        height: calc(100vh - 18rem);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     
