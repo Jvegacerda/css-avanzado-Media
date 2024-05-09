@@ -116,7 +116,7 @@ main {
 }
 
 .productos .juego img {
-    width: 250px;
+    width: 300px;
     margin: 1rem;
     object-fit: contain;
 }
@@ -176,7 +176,7 @@ footer p {
 
 #root {
     display: grid;
-    grid-template-columns: 2fr 9fr;
+    grid-template-columns: 1fr 9fr;
     grid-template-areas: 
         'header filtro'
         'header main'
@@ -184,8 +184,9 @@ footer p {
     ;
     }
 
+    /* Cabecera */
+
     header {
-        color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -193,11 +194,8 @@ footer p {
         padding: 1rem;
         grid-area: header;
         height: calc(100vh - 8rem);
-    }
-    
-    header i {
-        font-size: x-large;
-        margin: 0 1rem;
+        width: 199px;
+        font-size: small;
     }
     
     .fa-bars{
@@ -211,8 +209,11 @@ footer p {
     }
 
     header p {
+        font-size: large;
         margin: 1rem;
     }
+
+/* grilla juegos */
 
     .productos .juego {
         display: none;
@@ -222,28 +223,25 @@ footer p {
         height: calc(100vh - 18rem);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+    
     }
     
     .productos .juegos {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #ffffff;
         margin: 1rem;
         border: solid 2px;
         border-radius: 5px;
     }
 
-    
-    .productos .juegos h3{
-        
-        margin-bottom: 0.5rem;
-    }
-    
     .productos .juegos p { 
         border-radius: 10px;
         background-color: #0e2a5f;
         color: #fff;
         padding: 1rem;
-        
+        margin-top: 1rem;
     }
     
     .productos .juegos img {
@@ -256,6 +254,10 @@ footer p {
         width: 30%;
         text-align: center;
         margin: 1rem;
+    }
+
+    footer {
+        width: 199px;
     }
     
 
